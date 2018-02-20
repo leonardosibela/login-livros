@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:loginlivros"
         mc:Ignorable="d"
-        Title="ListagemLivros" Height="300" Width="300">
+        Title="Livros" Height="227.561" Width="300">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="188*"/>
+            <ColumnDefinition Width="105*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dtgFilmes" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="178" Width="274" Grid.ColumnSpan="2"/>
+
     </Grid>
 </Window>
