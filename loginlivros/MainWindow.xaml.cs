@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace loginlivros
 {
@@ -23,6 +10,28 @@ namespace loginlivros
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnLogar_Click(object sender, RoutedEventArgs e)
+        {
+            string userName = txtUser.Text;
+            string password = pwbPassword.Password.ToString();
+
+            if (userName.Equals("pfalves") && password.Equals("etec123"))
+            {
+                
+            }
+            else
+            {
+                displayInvalidUserMessage();
+            }
+        }
+
+        private void displayInvalidUserMessage()
+        {
+            MessageBox.Show("Favor verificar se você não digitou nada errado",
+                "Usuário ou senha inválidos",
+                MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }
