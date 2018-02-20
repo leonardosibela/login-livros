@@ -19,7 +19,9 @@ namespace loginlivros
 
             if (userName.Equals("pfalves") && password.Equals("etec123"))
             {
-                
+                ListagemLivros listagemLivros = new ListagemLivros();
+                listagemLivros.Show();
+                this.Close();
             }
             else
             {
