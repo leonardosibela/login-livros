@@ -22,6 +22,18 @@ namespace loginlivros
         public ListagemLivros()
         {
             InitializeComponent();
+
+            displayBooks();
+        }
+
+        private void displayBooks()
+        {
+            List<Book> books = new List<Book>();
+            books.Add(new Book("Histórias Extraordinárias", "Allan Poe", 1924));
+            books.Add(new Book("Eu, Robô", "Isaac Asimov", 1950));
+            books.Add(new Book("Um Estudo em Vermelho", "Arthur Conan Doyle", 1887));
+
+            this.dtgFilmes.ItemsSource = books;
         }
     }
 }
