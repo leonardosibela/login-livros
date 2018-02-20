@@ -12,14 +12,21 @@ namespace loginlivros
             InitializeComponent();
         }
 
-        private void btnLogar_Click(object sender, RoutedEventArgs e)
+        private void displayInvalidUserMessage()
+        {
+            MessageBox.Show("Favor verificar se você não digitou nada errado",
+                "Usuário ou senha inválidos",
+                MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             string userName = txtUser.Text;
             string password = pwbPassword.Password.ToString();
 
             if (userName.Equals("pfalves") && password.Equals("etec123"))
             {
-                ListagemLivros listagemLivros = new ListagemLivros();
+                BookList listagemLivros = new BookList();
                 listagemLivros.Show();
                 this.Close();
             }
@@ -27,13 +34,6 @@ namespace loginlivros
             {
                 displayInvalidUserMessage();
             }
-        }
-
-        private void displayInvalidUserMessage()
-        {
-            MessageBox.Show("Favor verificar se você não digitou nada errado",
-                "Usuário ou senha inválidos",
-                MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }

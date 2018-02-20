@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace loginlivros
 {
     /// <summary>
-    /// Interaction logic for ListagemLivros.xaml
+    /// Interaction logic for BookList.xaml
     /// </summary>
-    public partial class ListagemLivros : Window
+    public partial class BookList : Window
     {
-        public ListagemLivros()
+        public BookList()
         {
             InitializeComponent();
 
@@ -33,7 +33,7 @@ namespace loginlivros
             books.Add(new Book("Eu, Robô", "Isaac Asimov", 1950));
             books.Add(new Book("Um Estudo em Vermelho", "Arthur Conan Doyle", 1887));
 
-            this.dtgFilmes.ItemsSource = books;
+            this.dtgMovies.ItemsSource = books;
         }
     }
 }
