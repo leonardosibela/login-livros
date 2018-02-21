@@ -11,7 +11,13 @@
             <ColumnDefinition Width="188*"/>
             <ColumnDefinition Width="105*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dtgMovies" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="178" Width="464" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="dtgMovies" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="178" Width="464" Grid.ColumnSpan="2" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=name}" Header="Nome" />
+                <DataGridTextColumn Binding="{Binding Path=author}" Header="Autor" />
+                <DataGridTextColumn Binding="{Binding Path=year}" Header="Ano" />
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>
